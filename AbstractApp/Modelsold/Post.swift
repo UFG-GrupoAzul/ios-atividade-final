@@ -6,6 +6,7 @@
 //
 
 import Foundation
+/*Json -> Objeto*/
 
 struct Post: Decodable {
     let userId: Int
