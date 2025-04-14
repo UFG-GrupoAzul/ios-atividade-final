@@ -1,10 +1,3 @@
-//
-//  StoreManager.swift
-//  Abstract
-//
-//  Created by Silvano Maneck Malfatti on 20/03/25.
-//
-
 import Foundation
 
 public final class StoreManager {
@@ -16,47 +9,38 @@ public final class StoreManager {
     
     private init() {
         defaults = UserDefaults.standard
-    } // Impede a criação de instâncias externas
+    }
     
-    // MARK: - Métodos de Armazenamento
+    // MARK: - Métodos de Armazenamento Básicos
     
-    /// Salva um valor (String) no UserDefaults para uma chave específica.
     func save(_ value: String, forKey key: String) {
         defaults.set(value, forKey: key)
     }
     
-    /// Recupera um valor (String) do UserDefaults baseado na chave, retornando nil se não existir.
     func get(forKey key: String) -> String? {
         return defaults.string(forKey: key)
     }
     
-    /// Verifica se um valor existe para a chave informada.
     func exists(forKey key: String) -> Bool {
         return defaults.object(forKey: key) != nil
     }
     
-    /// Remove um valor do UserDefaults baseado na chave.
     func remove(forKey key: String) {
         defaults.removeObject(forKey: key)
     }
     
-    func saveUser(_ user: User, forKey key: String = "loggedUser") {
-          let encoder = JSONEncoder()
-          encoder.dateEncodingStrategy = .iso8601
-          if let encoded = try? encoder.encode(user) {
-              defaults.set(encoded, forKey: key)
-          }
-      }
-      
-      func getUser(forKey key: String = "loggedUser") -> User? {
-          if let data = defaults.data(forKey: key) {
-              let decoder = JSONDecoder()
-              decoder.dateDecodingStrategy = .iso8601
-              return try? decoder.decode(User.self, from: data)
-          }
-          return nil
-      }
-      
-      func removeUser(forKey key: String = "loggedUser") {
-          defaults.removeObject(forKey: key)
-      }}
+    // MARK: - Métodos para Usuário Logado (apenas username)
+    
+    func saveLoggedUser(username: String) {
+        defaults.set(username, forKey: "loggedUser")
+        print("Usuário salvo: \(username)")
+    }
+    
+    func getLoggedUser() -> String? {
+        return defaults.string(forKey: "loggedUser")
+    }
+    
+    func removeLoggedUser() {
+        defaults.removeObject(forKey: "loggedUser")
+    }
+}

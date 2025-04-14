@@ -13,8 +13,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var paswordTextField: UITextField!
     @IBOutlet weak var switchLogin: UISwitch!
     @IBOutlet weak var button: UIButton!
-    
-    var loggedUser: User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,10 +46,9 @@ class LoginViewController: UIViewController {
                 let user = UserService.getFakeUsers()
                 if let user = user.first(where: {$0.username == login && $0.password == password }) {
                     print("Login bem sucedido para o usuário \(user.name)")
-                    self.loggedUser = user
+                    StoreManager.shared.saveLoggedUser(username: user.username)
                     if (switchLogin.isOn) {
                         StoreManager.shared.save("true", forKey: "logged")
-                        StoreManager.shared.saveUser(user)
                     }
                     presentProfile()
                 }

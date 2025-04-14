@@ -16,14 +16,16 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         userImage.layer.cornerRadius = self.userImage.frame.size.height / 2
         userImage.layer.masksToBounds = true
-        
-        if let user = StoreManager.shared.getUser(){
-            nameLabel..text = user.name
+        if let username = StoreManager.shared.getLoggedUser() {
+            // Buscar o objeto User em algum array ou fonte de dados:
+            if let user = UserService.getFakeUsers().first(where: { $0.username == username }) {
+                nameLabel.text = user.name
+            }
         }
     }
     
     @IBAction func handleLogoff(_ sender: Any) {
-        StoreManager.shared.removeUser()
+        StoreManager.shared.removeLoggedUser()
         StoreManager.shared.remove(forKey: "logged")
         self.dismiss(animated: true)
     }
