@@ -39,4 +39,24 @@ public final class StoreManager {
     func remove(forKey key: String) {
         defaults.removeObject(forKey: key)
     }
-}
+    
+    func saveUser(_ user: User, forKey key: String = "loggedUser") {
+          let encoder = JSONEncoder()
+          encoder.dateEncodingStrategy = .iso8601
+          if let encoded = try? encoder.encode(user) {
+              defaults.set(encoded, forKey: key)
+          }
+      }
+      
+      func getUser(forKey key: String = "loggedUser") -> User? {
+          if let data = defaults.data(forKey: key) {
+              let decoder = JSONDecoder()
+              decoder.dateDecodingStrategy = .iso8601
+              return try? decoder.decode(User.self, from: data)
+          }
+          return nil
+      }
+      
+      func removeUser(forKey key: String = "loggedUser") {
+          defaults.removeObject(forKey: key)
+      }}

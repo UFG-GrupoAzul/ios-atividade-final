@@ -33,6 +33,8 @@
 		8105C3DA2DAAEA9F00FCC611 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105C3D72DAAEA9F00FCC611 /* ServiceManager.swift */; };
 		8105C3DB2DAAEA9F00FCC611 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105C3D82DAAEA9F00FCC611 /* StoreManager.swift */; };
 		8105C3DC2DAAEA9F00FCC611 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105C3D92DAAEA9F00FCC611 /* ViewCodable.swift */; };
+		812867FA2DAC770F00B11640 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812867F92DAC770F00B11640 /* UserService.swift */; };
+		81457B792DAC74FF0008A2DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81457B782DAC74FF0008A2DF /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		8105C3D72DAAEA9F00FCC611 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		8105C3D82DAAEA9F00FCC611 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		8105C3D92DAAEA9F00FCC611 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
+		812867F92DAC770F00B11640 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		81457B782DAC74FF0008A2DF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				5C36D43C2DA0955500C36BDA /* ProfileViewController.swift */,
+				812867F92DAC770F00B11640 /* UserService.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				8105C3D52DAAE9EF00FCC611 /* Post.swift */,
+				81457B782DAC74FF0008A2DF /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -445,8 +451,10 @@
 				5C9C68E22DA173BF00854FFC /* TimelineLoadingView.swift in Sources */,
 				5C9C68D72DA15D1500854FFC /* TimeLineRouter.swift in Sources */,
 				8105C3D62DAAE9EF00FCC611 /* Post.swift in Sources */,
+				812867FA2DAC770F00B11640 /* UserService.swift in Sources */,
 				5C9C68D92DA15D3300854FFC /* TimelineService.swift in Sources */,
 				5C9C68D12DA15C6600854FFC /* TimelineViewController.swift in Sources */,
+				81457B792DAC74FF0008A2DF /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

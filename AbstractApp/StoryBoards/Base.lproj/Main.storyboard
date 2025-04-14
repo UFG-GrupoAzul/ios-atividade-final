@@ -144,12 +144,20 @@
                                                             <outletCollection property="gestureRecognizers" destination="TZP-JI-wzC" appends="YES" id="fjn-gx-Pen"/>
                                                         </connections>
                                                     </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Oi-SP-bsX">
+                                                        <rect key="frame" x="120" y="89" width="42.5" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="6Oi-SP-bsX" firstAttribute="leading" secondItem="TLO-fw-ne1" secondAttribute="leading" constant="120" id="OLa-F7-Mib"/>
                                                     <constraint firstItem="o1J-Vs-97Z" firstAttribute="top" secondItem="TLO-fw-ne1" secondAttribute="top" constant="50" id="gVD-oq-R6R"/>
                                                     <constraint firstAttribute="trailing" secondItem="o1J-Vs-97Z" secondAttribute="trailing" constant="20" id="gkR-X6-8aQ"/>
                                                     <constraint firstAttribute="height" constant="120" id="mtU-U4-Lqp"/>
+                                                    <constraint firstAttribute="bottom" secondItem="6Oi-SP-bsX" secondAttribute="bottom" constant="10" id="mwU-Xi-XnP"/>
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="6xm-mE-YO2">
@@ -234,6 +242,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="n15-sy-uOt"/>
                     <connections>
+                        <outlet property="nameLabel" destination="6Oi-SP-bsX" id="f1e-yZ-W5x"/>
                         <outlet property="userImage" destination="6xm-mE-YO2" id="Fvt-a3-eug"/>
                     </connections>
                 </viewController>
@@ -244,7 +253,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2196" y="-343"/>
+            <point key="canvasLocation" x="2195.625" y="-343.3098591549296"/>
         </scene>
         <!--Timeline View Controller-->
         <scene sceneID="Lfy-fU-gq4">
@@ -326,7 +335,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="600" height="600"/>
+        <image name="Image" width="512" height="512"/>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <image name="logo_circular" width="1024" height="1024"/>
         <image name="person" catalog="system" width="128" height="121"/>
