@@ -17,7 +17,7 @@ class TimelineView: UIView {
     
     // MARK: - Stored Property
     private var posts: [Post] = []
-    var didSelectCell: ( ()->Void )?
+    var didSelectCell: ( (Post)->Void )?
     
     // MARK: - Initializers
     private lazy var loadingView = TimelineLoadingView()
@@ -82,7 +82,8 @@ extension TimelineView: ViewCodable {
 
 extension TimelineView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        didSelectCell?()
+        let selectedPost = posts[indexPath.row]
+        didSelectCell?(selectedPost)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
