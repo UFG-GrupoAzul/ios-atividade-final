@@ -20,9 +20,14 @@ class TimelineViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Timeline"
         initViper()
-        timelineView.didSelectCell = { [weak self] in
-            let viewController = self?.storyboard?.instantiateViewController(identifier: "postDetail")
-            self?.navigationController?.pushViewController(viewController!, animated: true)
+        timelineView.didSelectCell = { [weak self] post in
+            guard let self = self else { return }
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let postDetailVC = storyboard.instantiateViewController(identifier: "postDetail") as? PostDetailViewController {
+                postDetailVC.post = post
+                self.navigationController?.pushViewController(postDetailVC, animated: true)
+            }
         }
     }
     
