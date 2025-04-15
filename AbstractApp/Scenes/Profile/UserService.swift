@@ -13,7 +13,7 @@ class UserService {
         formatter.dateFormat = "yyyy-MM-dd"
 
         return [
-            User(username: "ufg", password: "1234", name: "UFG", dateOfBirth: formatter.date(from: "1990-01-01")!, gender: "Masculino", email: "joao@ufg.br"),
+            User(username: "ufg", password: "1234", name: "Universidade Federal de Goiás", dateOfBirth: formatter.date(from: "1990-01-01")!, gender: "Masculino", email: "joao@ufg.br"),
             User(username: "joao", password: "1234", name: "João da Silva", dateOfBirth: formatter.date(from: "1990-05-10")!, gender: "Masculino", email: "joao@ufg.br"),
             User(username: "maria", password: "1234", name: "Maria Oliveira", dateOfBirth: formatter.date(from: "1992-08-21")!, gender: "Feminino", email: "maria@ufg.br"),
             User(username: "lucas", password: "1234", name: "Lucas Pereira", dateOfBirth: formatter.date(from: "1988-12-03")!, gender: "Masculino", email: "lucas@ufg.br"),

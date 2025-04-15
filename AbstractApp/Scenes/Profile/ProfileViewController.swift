@@ -9,8 +9,12 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var loginLabel: UILabel!
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var dateOfBirthLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +24,10 @@ class ProfileViewController: UIViewController {
             // Buscar o objeto User em algum array ou fonte de dados:
             if let user = UserService.getFakeUsers().first(where: { $0.username == username }) {
                 nameLabel.text = user.name
+                loginLabel.text = user.username
+                emailLabel.text = user.email
+                dateOfBirthLabel.text = user.formattedDateOfBirth
+                genderLabel.text = user.gender
             }
         }
     }
@@ -29,4 +37,8 @@ class ProfileViewController: UIViewController {
         StoreManager.shared.remove(forKey: "logged")
         self.dismiss(animated: true)
     }
+    
+    @IBAction func editProfile(_ sender: Any) {
+    }
+    
 }

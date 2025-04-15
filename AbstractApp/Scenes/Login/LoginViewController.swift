@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var paswordTextField: UITextField!
     @IBOutlet weak var switchLogin: UISwitch!
+    @IBOutlet weak var msgLabel: UILabel!
     @IBOutlet weak var button: UIButton!
 
     override func viewDidLoad() {
@@ -53,6 +54,7 @@ class LoginViewController: UIViewController {
                     presentProfile()
                 }
             }else{
+                msgLabel.
                 print("Credenciais inválidas")
                 let alert = UIAlertController(title: "Erro", message: "Usuário ou senha inválidos.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))

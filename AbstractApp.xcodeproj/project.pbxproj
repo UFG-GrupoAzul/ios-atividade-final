@@ -29,6 +29,7 @@
 		5CBF08AA2D8E2F830085E6D7 /* AbstractAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF08A92D8E2F830085E6D7 /* AbstractAppTests.swift */; };
 		5CBF08B42D8E2F830085E6D7 /* AbstractAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF08B32D8E2F830085E6D7 /* AbstractAppUITests.swift */; };
 		5CBF08B62D8E2F830085E6D7 /* AbstractAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF08B52D8E2F830085E6D7 /* AbstractAppUITestsLaunchTests.swift */; };
+		653A63DF2DADEEDE00BF1F55 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A63DE2DADEEDE00BF1F55 /* ProfileEditViewController.swift */; };
 		8105C3D62DAAE9EF00FCC611 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105C3D52DAAE9EF00FCC611 /* Post.swift */; };
 		8105C3DA2DAAEA9F00FCC611 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105C3D72DAAEA9F00FCC611 /* ServiceManager.swift */; };
 		8105C3DB2DAAEA9F00FCC611 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8105C3D82DAAEA9F00FCC611 /* StoreManager.swift */; };
@@ -81,6 +82,7 @@
 		5CBF08B32D8E2F830085E6D7 /* AbstractAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractAppUITests.swift; sourceTree = "<group>"; };
 		5CBF08B52D8E2F830085E6D7 /* AbstractAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5CBF08C72D8E35E50085E6D7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		653A63DE2DADEEDE00BF1F55 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		8105C3D52DAAE9EF00FCC611 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		8105C3D72DAAEA9F00FCC611 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		8105C3D82DAAEA9F00FCC611 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				5C36D43C2DA0955500C36BDA /* ProfileViewController.swift */,
 				812867F92DAC770F00B11640 /* UserService.swift */,
+				653A63DE2DADEEDE00BF1F55 /* ProfileEditViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CBF08972D8E2F800085E6D7 /* LoginViewController.swift in Sources */,
+				653A63DF2DADEEDE00BF1F55 /* ProfileEditViewController.swift in Sources */,
 				8105C3DA2DAAEA9F00FCC611 /* ServiceManager.swift in Sources */,
 				8105C3DB2DAAEA9F00FCC611 /* StoreManager.swift in Sources */,
 				8105C3DC2DAAEA9F00FCC611 /* ViewCodable.swift in Sources */,

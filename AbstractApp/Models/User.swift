@@ -14,4 +14,10 @@ struct User: Codable {
     let dateOfBirth: Date
     let gender: String
     let email: String
+    
+    var formattedDateOfBirth: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        return formatter.string(from: dateOfBirth)
+    }
 }
