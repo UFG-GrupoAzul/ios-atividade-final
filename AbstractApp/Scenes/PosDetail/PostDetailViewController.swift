@@ -9,21 +9,54 @@ import UIKit
 
 class PostDetailViewController: UIViewController {
 
+    var post: Post?
+
+    private let titleTextView: UITextView = {
+        let textView = UITextView()
+        textView.font = .boldSystemFont(ofSize: 24)
+        textView.textAlignment = .center
+        textView.textColor = .white
+        textView.backgroundColor = .clear
+        textView.isEditable = false
+        textView.isScrollEnabled = false
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        return textView
+    }()
+
+    private let contentTextView: UITextView = {
+        let textView = UITextView()
+        textView.font = .systemFont(ofSize: 18)
+        textView.textColor = .white
+        textView.backgroundColor = .clear
+        textView.isEditable = false
+        textView.isScrollEnabled = false
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        return textView
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Detalhes do post"
-        // Do any additional setup after loading the view.
-    }
+        self.title = "Detalhes de post"
     
+        setupViews()
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        titleTextView.text = post?.title
+        contentTextView.text = post?.body
     }
-    */
 
+    private func setupViews() {
+        view.addSubview(titleTextView)
+        view.addSubview(contentTextView)
+
+        NSLayoutConstraint.activate([
+            titleTextView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
+            titleTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            titleTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+
+            contentTextView.topAnchor.constraint(equalTo: titleTextView.bottomAnchor, constant: 16),
+            contentTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            contentTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            contentTextView.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
+        ])
+    }
 }
