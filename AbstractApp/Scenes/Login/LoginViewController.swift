@@ -12,8 +12,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var paswordTextField: UITextField!
     @IBOutlet weak var switchLogin: UISwitch!
+    @IBOutlet weak var msgLabel: UILabel!
     @IBOutlet weak var button: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -39,14 +40,31 @@ class LoginViewController: UIViewController {
         loginTextField.resignFirstResponder()
         paswordTextField.resignFirstResponder()
     }
-    
     @IBAction func handleLogin(_ sender: UIButton) {
         if let login = loginTextField.text, let password = paswordTextField.text {
             if (!login.isEmpty && !password.isEmpty) {
-                presentProfile()
+                let users = UserService.getFakeUsers()
+                if let user = users.first(where: { $0.username == login && $0.password == password }) {
+                    print("Login bem-sucedido para o usuário \(user.name)")
+                    StoreManager.shared.saveLoggedUser(username: user.username)
+                    if switchLogin.isOn {
+                        StoreManager.shared.save("true", forKey: "logged")
+                    }
+                    presentProfile()
+                } else {
+                    showAlertLoginInvalido()
+                }
+            } else {
+                showAlertLoginInvalido()
             }
         }
     }
+    func showAlertLoginInvalido() {
+        let alert = UIAlertController(title: "Erro", message: "Usuário e/ou senha inválidos.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true)
+    }
+	
     
     @IBAction func hanleInfo(_ sender: Any) {
         presentAbout()
