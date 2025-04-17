@@ -8,13 +8,13 @@
 import Foundation
 
 struct User: Codable {
-    let username: String
-    let password: String
-    let name: String
-    let dateOfBirth: Date
-    let gender: String
-    let email: String
-    
+    var username: String
+    var password: String
+    var name: String
+    var dateOfBirth: Date
+    var gender: String
+    var email: String
+
     var formattedDateOfBirth: String {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy"

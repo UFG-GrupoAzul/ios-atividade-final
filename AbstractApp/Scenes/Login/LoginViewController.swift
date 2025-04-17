@@ -40,28 +40,31 @@ class LoginViewController: UIViewController {
         loginTextField.resignFirstResponder()
         paswordTextField.resignFirstResponder()
     }
-    
     @IBAction func handleLogin(_ sender: UIButton) {
         if let login = loginTextField.text, let password = paswordTextField.text {
             if (!login.isEmpty && !password.isEmpty) {
-                let user = UserService.getFakeUsers()
-                if let user = user.first(where: {$0.username == login && $0.password == password }) {
-                    print("Login bem sucedido para o usuário \(user.name)")
+                let users = UserService.getFakeUsers()
+                if let user = users.first(where: { $0.username == login && $0.password == password }) {
+                    print("Login bem-sucedido para o usuário \(user.name)")
                     StoreManager.shared.saveLoggedUser(username: user.username)
-                    if (switchLogin.isOn) {
+                    if switchLogin.isOn {
                         StoreManager.shared.save("true", forKey: "logged")
                     }
                     presentProfile()
+                } else {
+                    showAlertLoginInvalido()
                 }
-            }else{
-                msgLabel.
-                print("Credenciais inválidas")
-                let alert = UIAlertController(title: "Erro", message: "Usuário ou senha inválidos.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(alert, animated: true)
+            } else {
+                showAlertLoginInvalido()
             }
         }
     }
+    func showAlertLoginInvalido() {
+        let alert = UIAlertController(title: "Erro", message: "Usuário e/ou senha inválidos.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true)
+    }
+	
     
     @IBAction func hanleInfo(_ sender: Any) {
         presentAbout()
