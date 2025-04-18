@@ -54,6 +54,17 @@ class TimelineView: UIView {
         tableView.delegate = self
         tableView.reloadData()
     }
+    
+    func hideLoading() {
+        loadingView.isHidden = true
+    }
+
+    func hideTimelineView() {
+        tableView.isHidden = true
+    }
+    
+    
+    
 }
 
 extension TimelineView: ViewCodable {

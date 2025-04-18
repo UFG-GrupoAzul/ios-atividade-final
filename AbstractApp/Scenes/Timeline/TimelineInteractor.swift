@@ -23,12 +23,14 @@ extension TimelineInteractor {
     func loadTimeline() {
         presenter.startLoading()
         service.fetchTimeline { [weak self] result in
+            guard let self = self else {
+                return
+            }
             switch(result) {
             case .success(let posts):
-                self?.presenter.presentTimeline(with: posts)
+                self.presenter.presentTimeline(with: posts)
             case .failure(let error):
-                print("Apresentar o erro")
-                //self?.presenter.presentError()
+                self.presenter.presentError(error: error)
             }
         }
     }

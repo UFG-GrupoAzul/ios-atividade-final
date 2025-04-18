@@ -25,4 +25,13 @@ extension TimelinePresenter {
     func presentTimeline(with posts: [Post]) {
         viewController?.displayTimeline(with: posts)
     }
+    
+    func presentError(error: Error)
+    {
+        let errorMessage = "Ocorreu um erro ao carregar os posts. Por favor, tente novamente."
+
+        viewController?.displayError(message: errorMessage)
+
+
+    }
 }
