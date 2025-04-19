@@ -456,7 +456,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhO-FE-Kfs">
-                                <rect key="frame" x="110" y="505" width="100" height="35"/>
+                                <rect key="frame" x="110" y="504.5" width="100" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="30s-gV-hM5"/>
                                 </constraints>
@@ -478,17 +478,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Sri-Jy-SAG">
-                                <rect key="frame" x="20" y="450" width="280" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="4s6-ky-BfB"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="450" width="166.5" height="34.5"/>
                                 <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
                                     <!--2037-12-31 11:00:00 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="pt_BR"/>
                             </datePicker>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WI2-fo-5hi">
-                                <rect key="frame" x="20" y="382" width="163" height="32"/>
+                                <rect key="frame" x="20" y="382" width="166.5" height="32"/>
                                 <segments>
                                     <segment title="Masculino"/>
                                     <segment title="Feminino"/>
@@ -500,32 +497,32 @@
                         <constraints>
                             <constraint firstItem="0PI-bT-cyP" firstAttribute="leading" secondItem="gW9-tZ-Rsx" secondAttribute="leading" constant="20" id="4iL-dr-JgO"/>
                             <constraint firstItem="FaW-Pq-0aN" firstAttribute="top" secondItem="wyf-tf-eDw" secondAttribute="bottom" constant="8" id="4vm-VA-zo0"/>
+                            <constraint firstItem="Sri-Jy-SAG" firstAttribute="leading" secondItem="WI2-fo-5hi" secondAttribute="leading" id="51A-wr-qeh"/>
                             <constraint firstItem="fIc-QX-heR" firstAttribute="leading" secondItem="gW9-tZ-Rsx" secondAttribute="leading" constant="20" id="5mp-La-Kxr"/>
                             <constraint firstItem="Mj5-PK-eyY" firstAttribute="leading" secondItem="gW9-tZ-Rsx" secondAttribute="leading" constant="20" id="5nT-Dd-rLx"/>
                             <constraint firstItem="V7P-ha-iWt" firstAttribute="leading" secondItem="gW9-tZ-Rsx" secondAttribute="leading" id="6Xd-gh-TSA"/>
-                            <constraint firstItem="Sri-Jy-SAG" firstAttribute="leading" secondItem="gW9-tZ-Rsx" secondAttribute="leading" constant="20" id="7pP-Ry-fkB"/>
                             <constraint firstItem="0PI-bT-cyP" firstAttribute="top" secondItem="FaW-Pq-0aN" secondAttribute="bottom" constant="8" id="81v-HS-9KC"/>
                             <constraint firstItem="wyf-tf-eDw" firstAttribute="leading" secondItem="gW9-tZ-Rsx" secondAttribute="leading" constant="20" id="AOK-Ji-EFR"/>
+                            <constraint firstItem="Sri-Jy-SAG" firstAttribute="trailing" secondItem="WI2-fo-5hi" secondAttribute="trailing" id="CMf-nD-i8U"/>
                             <constraint firstItem="ytx-2j-x84" firstAttribute="leading" secondItem="gW9-tZ-Rsx" secondAttribute="leading" constant="20" id="DkX-if-mO4"/>
                             <constraint firstItem="WI2-fo-5hi" firstAttribute="leading" secondItem="gW9-tZ-Rsx" secondAttribute="leading" constant="20" id="Emi-gP-qQw"/>
                             <constraint firstItem="FaW-Pq-0aN" firstAttribute="leading" secondItem="gW9-tZ-Rsx" secondAttribute="leading" constant="20" id="LDX-aq-QM1"/>
                             <constraint firstItem="Agx-Lb-Pn2" firstAttribute="top" secondItem="fIc-QX-heR" secondAttribute="bottom" constant="8" id="Lid-Dt-nrK"/>
                             <constraint firstItem="Sgn-4S-h7x" firstAttribute="leading" secondItem="gW9-tZ-Rsx" secondAttribute="leading" constant="20" id="M1h-f3-NqV"/>
+                            <constraint firstItem="LhO-FE-Kfs" firstAttribute="top" secondItem="Sri-Jy-SAG" secondAttribute="bottom" constant="20" id="N2y-iE-Ron"/>
                             <constraint firstItem="Mj5-PK-eyY" firstAttribute="top" secondItem="WI2-fo-5hi" secondAttribute="bottom" constant="8" id="U45-Ft-cR3"/>
                             <constraint firstItem="fIc-QX-heR" firstAttribute="top" secondItem="0PI-bT-cyP" secondAttribute="bottom" constant="8" id="VAa-Gf-eED"/>
                             <constraint firstItem="WI2-fo-5hi" firstAttribute="top" secondItem="Sgn-4S-h7x" secondAttribute="bottom" constant="8" id="bY3-DZ-M1s"/>
                             <constraint firstItem="V7P-ha-iWt" firstAttribute="top" secondItem="0K5-ef-5LA" secondAttribute="top" id="eAu-uR-sMF"/>
                             <constraint firstItem="gW9-tZ-Rsx" firstAttribute="trailing" secondItem="wyf-tf-eDw" secondAttribute="trailing" constant="20" id="gcs-Q6-VNH"/>
                             <constraint firstItem="gW9-tZ-Rsx" firstAttribute="trailing" secondItem="0PI-bT-cyP" secondAttribute="trailing" constant="20" id="iXB-LU-jjk"/>
-                            <constraint firstItem="Sri-Jy-SAG" firstAttribute="trailing" secondItem="Agx-Lb-Pn2" secondAttribute="trailing" id="jlw-qd-Nzh"/>
                             <constraint firstItem="wyf-tf-eDw" firstAttribute="top" secondItem="ytx-2j-x84" secondAttribute="bottom" constant="8" id="lNP-ks-7by"/>
                             <constraint firstItem="V7P-ha-iWt" firstAttribute="trailing" secondItem="gW9-tZ-Rsx" secondAttribute="trailing" id="n4u-Uu-hmw"/>
                             <constraint firstItem="Sgn-4S-h7x" firstAttribute="top" secondItem="Agx-Lb-Pn2" secondAttribute="bottom" constant="8" id="nd4-9w-tlw"/>
                             <constraint firstItem="ytx-2j-x84" firstAttribute="top" secondItem="V7P-ha-iWt" secondAttribute="bottom" constant="20" id="qdS-IG-myd"/>
+                            <constraint firstItem="Sri-Jy-SAG" firstAttribute="top" secondItem="Mj5-PK-eyY" secondAttribute="bottom" constant="8" id="s64-ug-nAn"/>
                             <constraint firstItem="Agx-Lb-Pn2" firstAttribute="leading" secondItem="gW9-tZ-Rsx" secondAttribute="leading" constant="20" id="uxY-gm-2UJ"/>
                             <constraint firstItem="LhO-FE-Kfs" firstAttribute="centerX" secondItem="gW9-tZ-Rsx" secondAttribute="centerX" id="v27-5f-YZU"/>
-                            <constraint firstItem="LhO-FE-Kfs" firstAttribute="top" secondItem="Sri-Jy-SAG" secondAttribute="bottom" constant="20" id="vn4-s2-u8L"/>
-                            <constraint firstItem="Sri-Jy-SAG" firstAttribute="top" secondItem="Mj5-PK-eyY" secondAttribute="bottom" constant="8" id="zEx-8W-LPd"/>
                             <constraint firstItem="gW9-tZ-Rsx" firstAttribute="trailing" secondItem="Agx-Lb-Pn2" secondAttribute="trailing" constant="20" id="zRT-ns-cJf"/>
                         </constraints>
                     </view>
@@ -543,7 +540,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="512" height="512"/>
+        <image name="Image" width="600" height="600"/>
         <image name="info.circle.fill" catalog="system" width="128" height="123"/>
         <image name="logo_circular" width="1024" height="1024"/>
         <image name="person" catalog="system" width="128" height="121"/>
@@ -551,16 +548,16 @@
         <image name="text.justify" catalog="system" width="128" height="101"/>
         <image name="ufg" width="168" height="240"/>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
